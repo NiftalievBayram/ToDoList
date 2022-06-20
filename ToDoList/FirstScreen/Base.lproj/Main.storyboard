@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -21,9 +22,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="488"/>
+            <point key="canvasLocation" x="1264" y="-386"/>
         </scene>
-        <!--Ended-->
+        <!--View Controller-->
         <scene sceneID="Ad9-DT-pbD">
             <objects>
                 <viewController id="tf5-WC-vWM" sceneMemberID="viewController">
@@ -31,29 +32,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fdf-cL-1YQ"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ended" selectedImage="checkmark.icloud" catalog="system" id="mMX-Ef-W5x"/>
+                    <tabBarItem key="tabBarItem" title="" id="mMX-Ef-W5x">
+                        <imageReference key="image" image="checkmark.icloud.fill" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color red="0.39277607199999998" green="0.38662183280000001" blue="0.9638969302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" red="0.39277607199999998" green="0.38662183280000001" blue="0.9638969302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRS-dH-khk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="412" y="488"/>
         </scene>
-        <!--to do-->
+        <!--View Controller-->
         <scene sceneID="Cxn-iE-3Wt">
             <objects>
                 <viewController id="9ak-ra-zXv" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kud-Yx-i6B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD9-WY-0Qu">
+                                <rect key="frame" x="50" y="740" width="94" height="48"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Add" image="addButton">
+                                    <color key="titleColor" red="0.39277607199999998" green="0.38662183280000001" blue="0.9638969302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="iL6-zo-ZaO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rel-km-qGa"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OD9-WY-0Qu" firstAttribute="bottom" secondItem="rel-km-qGa" secondAttribute="bottom" constant="-25" id="7cR-ON-jtu"/>
+                            <constraint firstItem="OD9-WY-0Qu" firstAttribute="leading" secondItem="rel-km-qGa" secondAttribute="leading" constant="50" id="MUg-EM-9Ec"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="to do" selectedImage="pencil.circle" catalog="system" id="zlJ-1y-GMT"/>
+                    <tabBarItem key="tabBarItem" id="zlJ-1y-GMT">
+                        <imageReference key="image" image="pencil.circle" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color red="0.39277607199999998" green="0.38662183280000001" blue="0.9638969302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AwT-in-AgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="-386"/>
+            <point key="canvasLocation" x="411.59420289855075" y="-386.38392857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="TNC-2P-oFX">
@@ -75,13 +110,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark.icloud" catalog="system" width="128" height="88"/>
+        <image name="addButton" width="48" height="48"/>
+        <image name="checkmark.icloud.fill" catalog="system" width="128" height="88"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
