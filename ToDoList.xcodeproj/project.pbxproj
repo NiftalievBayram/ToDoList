@@ -56,15 +56,39 @@
 		DD95778A2860F51A002654A8 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				DD95778B2860F51A002654A8 /* AppDelegate.swift */,
-				DD95778D2860F51A002654A8 /* SceneDelegate.swift */,
-				DD95778F2860F51A002654A8 /* ViewController.swift */,
-				DD9577912860F51A002654A8 /* Main.storyboard */,
-				DD9577942860F51C002654A8 /* Assets.xcassets */,
-				DD9577962860F51C002654A8 /* LaunchScreen.storyboard */,
+				DD9577A12860F727002654A8 /* FirstScreen */,
+				DD9577A02860F6F9002654A8 /* LaunchScreen */,
+				DD95779F2860F6D9002654A8 /* Support */,
 				DD9577992860F51C002654A8 /* Info.plist */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		DD95779F2860F6D9002654A8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				DD9577942860F51C002654A8 /* Assets.xcassets */,
+				DD95778D2860F51A002654A8 /* SceneDelegate.swift */,
+				DD95778B2860F51A002654A8 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		DD9577A02860F6F9002654A8 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DD9577962860F51C002654A8 /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		DD9577A12860F727002654A8 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DD95778F2860F51A002654A8 /* ViewController.swift */,
+				DD9577912860F51A002654A8 /* Main.storyboard */,
+			);
+			path = FirstScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
